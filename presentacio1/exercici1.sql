@@ -149,4 +149,7 @@ SELECT id,nom FROM hyrule.armes; -- funciona
 -- En fer la SELECT ens diu que no té permís, ja que només en té per a certs camps, per això sols podem fer SELECT als camps id i nom que és el que ens indica el SHOW GRANTS fet anteriorment.
 
 -- j) Esborra l'usuari navi. Com ha quedat la BD a nivell d'usuaris (taula mysql.user) i de permisos (taula information_schema.user_privileges)?
--- TODO
+DROP navi@localhost;
+-- >> Comprovació taula mysql.user
+SELECT user, host FROM mysql.user; -- Usuari 'navi'@'localhost' no apareix
+SELECT * FROM information_schema.user_privileges; -- Usuari 'navi'@'localhost'
