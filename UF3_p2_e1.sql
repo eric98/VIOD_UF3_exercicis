@@ -43,7 +43,8 @@ SELECT mysql.user.user,
 	mysql.tables_priv.Column_priv
 	FROM mysql.tables_priv
 	JOIN mysql.user
-	ON mysql.user.user = mysql.tables_priv.User;
+	ON mysql.user.user = mysql.tables_priv.User
+	WHERE mysql.tables_priv.Db = 'hyrule';
 
 SELECT u.user,
 	u.host,
@@ -52,7 +53,8 @@ SELECT u.user,
 	p.Column_priv
 	FROM mysql.tables_priv AS p
 	JOIN mysql.user AS u
-	ON u.user = p.User;
+	ON u.user = p.User
+	WHERE p.Db = 'hyrule';
 
 -- b) Amb la taula views de la base de dades information_schema consulta la 
 -- definició de les vistes creades al SGBD. Pensa que abans hauràs de crear 
