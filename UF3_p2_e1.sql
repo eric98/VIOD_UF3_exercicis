@@ -45,7 +45,6 @@ SELECT mysql.user.user,
 	JOIN mysql.user
 	ON mysql.user.user = mysql.tables_priv.User;
 
-
 SELECT u.user,
 	u.host,
 	p.Table_name,
@@ -64,8 +63,8 @@ CREATE VIEW hyrule.heroisjoves AS
 	WHERE edat < 18;
 
 -- Comprovació
-SELECT * FROM information_schema.views WHERE TABLE_NAME = 'hyrule.heroisjoves'\G
-
+SELECT * FROM information_schema.views WHERE TABLE_SCHEMA = 'hyrule' AND TABLE_NAME = 'heroisjoves'\G
+	
 -- c) Consulta el nombre de files que té cada taula de la base de dades hyrule.
 SELECT TABLE_SCHEMA,TABLE_NAME,TABLE_ROWS FROM information_schema.tables WHERE TABLE_SCHEMA='hyrule';
 
