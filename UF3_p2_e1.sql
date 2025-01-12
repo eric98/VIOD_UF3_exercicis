@@ -73,7 +73,7 @@ SELECT * FROM information_schema.views WHERE TABLE_SCHEMA = 'hyrule' AND TABLE_N
 SELECT TABLE_SCHEMA,TABLE_NAME,TABLE_ROWS FROM information_schema.tables WHERE TABLE_SCHEMA='hyrule';
 
 -- d) Mostra les columnes de la taula armes de la base de dades hyrule.
-SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME FROM COLUMNS WHERE TABLE_NAME = 'armes' AND TABLE_SCHEMA = 'hyrule';
+SELECT TABLE_SCHEMA, TABLE_NAME, COLUMN_NAME FROM information_schema.COLUMNS WHERE TABLE_NAME = 'armes' AND TABLE_SCHEMA = 'hyrule';
 
 -- Curiositat: consulta SELECT a la taula information_schema.COLUMNS simulant el resultat de la comanda DESCRIBE
 SELECT COLUMN_NAME AS 'Field',
