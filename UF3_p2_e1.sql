@@ -38,6 +38,7 @@ DESCRIBE armes;
 -- que tens dins SGBD.
 SELECT mysql.user.user,
 	mysql.user.host,
+	mysql.tables_priv.Db,
 	mysql.tables_priv.Table_name,
 	mysql.tables_priv.Table_priv,
 	mysql.tables_priv.Column_priv
@@ -48,6 +49,7 @@ SELECT mysql.user.user,
 
 SELECT u.user,
 	u.host,
+	p.Db,
 	p.Table_name,
 	p.Table_priv,
 	p.Column_priv
